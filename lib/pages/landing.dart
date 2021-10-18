@@ -9,11 +9,23 @@ class LandingPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         body: SafeArea(
-      child: ElevatedButton(
-        onPressed: () {
-          AutoRouter.of(context).push(SettingRoute(name0: "Santa"));
-        },
-        child: const Text("Click"),
+      child: Column(
+        children: [
+          ElevatedButton(
+            onPressed: () {
+              AutoRouter.of(context)
+                  .push(SettingRoute(pageName: "Setting Page"));
+            },
+            child: const Text("Setting page"),
+          ),
+          ElevatedButton(
+            onPressed: () {
+              AutoRouter.of(context)
+                  .push(ProfileRoute(pageName: "Profile Page"));
+            },
+            child: const Text("Setting page"),
+          ),
+        ],
       ),
     ));
   }

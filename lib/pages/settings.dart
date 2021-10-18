@@ -3,17 +3,19 @@ import 'package:flutter/material.dart';
 class SettingPage extends StatelessWidget {
   const SettingPage({
     Key? key,
-    required this.userName,
+    required this.pageName,
   }) : super(key: key);
 
-  final String userName;
+  final String pageName;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-        child: Column(
-          children: [Text(userName)],
+      body: SafeArea(
+        child: Center(
+          child: Text(
+            pageName,
+          ),
         ),
       ),
     );
