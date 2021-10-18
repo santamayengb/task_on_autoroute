@@ -14,16 +14,16 @@ class LandingPage extends StatelessWidget {
           ElevatedButton(
             onPressed: () {
               AutoRouter.of(context)
-                  .push(SettingRoute(pageName: "Setting Page"));
+                  .push(SettingRoute(pageName: 'Setting page'));
             },
             child: const Text("Setting page"),
           ),
           ElevatedButton(
             onPressed: () {
               AutoRouter.of(context)
-                  .push(ProfileRoute(pageName: "Profile Page"));
+                  .push(ProfileRoute(pageName: 'Profile Page'));
             },
-            child: const Text("Setting page"),
+            child: const Text("Profile page"),
           ),
         ],
       ),
