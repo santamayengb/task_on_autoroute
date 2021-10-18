@@ -1,10 +1,21 @@
 import 'package:flutter/material.dart';
 
-class Setting extends StatelessWidget {
-  const Setting({Key? key}) : super(key: key);
+class SettingPage extends StatelessWidget {
+  const SettingPage({
+    Key? key,
+    required this.name,
+  }) : super(key: key);
+
+  final String name;
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      body: Center(
+        child: Column(
+          children: [Text(name)],
+        ),
+      ),
+    );
   }
 }
