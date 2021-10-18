@@ -23,7 +23,7 @@ class AppRouter extends _i2.RootStackRouter {
       final args = routeData.argsAs<SettingRouteArgs>();
       return _i2.MaterialPageX<dynamic>(
           routeData: routeData,
-          child: _i1.SettingPage(key: args.key, name: args.name));
+          child: _i1.SettingPage(key: args.key, userName: args.userName));
     },
     ProfileRoute.name: (routeData) {
       return _i2.MaterialPageX<dynamic>(
@@ -48,20 +48,20 @@ class LandingRoute extends _i2.PageRouteInfo<void> {
 
 /// generated route for [_i1.SettingPage]
 class SettingRoute extends _i2.PageRouteInfo<SettingRouteArgs> {
-  SettingRoute({_i3.Key? key, required String name0})
+  SettingRoute({_i3.Key? key, required String userName})
       : super(name,
             path: '/setting-page',
-            args: SettingRouteArgs(key: key, name: name));
+            args: SettingRouteArgs(key: key, userName: userName));
 
   static const String name = 'SettingRoute';
 }
 
 class SettingRouteArgs {
-  const SettingRouteArgs({this.key, required this.name0});
+  const SettingRouteArgs({this.key, required this.userName});
 
   final _i3.Key? key;
 
-  final String name;
+  final String userName;
 }
 
 /// generated route for [_i1.ProfilePage]
